@@ -1,0 +1,42 @@
+cat > index.html <<'HTML'
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Smart Task Analyzer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header><h1>Smart Task Analyzer</h1></header>
+    <main>
+      <section class="input">
+        <h2>Input Tasks</h2>
+        <label>Paste JSON Array of Tasks:</label>
+        <textarea id="taskInput" placeholder='[{"id":1,"title":"Fix login","due_date":"2025-11-30","estimated_hours":3,"importance":8,"dependencies":[]}]'></textarea>
+        <div class="controls">
+          <select id="strategy">
+            <option value="smart">Smart Balance</option>
+            <option value="fast">Fastest Wins</option>
+            <option value="impact">High Impact</option>
+            <option value="deadline">Deadline Driven</option>
+          </select>
+          <button id="analyzeBtn">Analyze Tasks</button>
+        </div>
+        <div id="message" class="message"></div>
+      </section>
+
+      <section class="output">
+        <h2>Results</h2>
+        <div id="results"></div>
+      </section>
+    </main>
+    <footer>
+      <small>Smart Task Analyzer • Local</small>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+HTML
