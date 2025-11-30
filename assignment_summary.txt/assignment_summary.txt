@@ -1,0 +1,1 @@
+Smart Task Analyzer is a Django-based backend with a simple static frontend that analyzes and ranks tasks using urgency, importance, effort, and dependency impact. The project includes a task-scoring algorithm, two API endpoints, and a clean UI built with plain HTML/CSS/JS. Refer to README.md for setup instructions, usage, and examples.
